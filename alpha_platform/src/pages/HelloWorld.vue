@@ -84,12 +84,18 @@
 </template>
 
 <script>
+import { demo } from '../api/demo.js'
+
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  created() {
+    console.log('下一句代码发发送一个错误的请求')
+    demo()
   }
 }
 </script>
